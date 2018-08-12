@@ -1,5 +1,5 @@
 (function($) {
-  "use strict"; // Start of use strict
+  "use strict"; 
 
   // Toggle the side navigation
   $("#sidebarToggle").click(function(e) {
