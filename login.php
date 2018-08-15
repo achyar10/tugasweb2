@@ -19,22 +19,30 @@
 
   <body class="bg-dark">
 
+    <?php 
+    if(isset($_GET['pesan'])){
+      if($_GET['pesan'] == "gagal"){
+        echo "<div style='margin-bottom:-55px' class='alert alert-danger' role='alert'><span class='glyphicon glyphicon-warning-sign'></span>  Login Gagal !! Username dan Password Salah !!</div>";
+      }
+    }
+    ?>
+
     <div class="container">
       <div class="card card-login mx-auto mt-5">
         <div class="card-header">Login</div>
         <div class="card-body">
-          <form>
+          <form action="login_action.php" method="POST">
 
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="inputUsername" class="form-control" placeholder="username" required="required" autofocus="autofocus">
+                <input type="text" name="username" id="inputUsername" class="form-control" placeholder="username" required="required" autofocus="autofocus">
                 <label for="inputUsername">Username</label>
               </div>
             </div>
 
             <div class="form-group">
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
                 <label for="inputPassword">Password</label>
               </div>
             </div>
